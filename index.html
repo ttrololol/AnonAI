@@ -2,46 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AnonAI | Code Intelligence</title>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #0d1117;
+      background: linear-gradient(135deg, #0d1117, #161b22);
       color: #c9d1d9;
       font-family: 'Fira Code', monospace;
       margin: 0;
-      padding: 2rem;
+      padding: 0;
       text-align: center;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    header {
+      padding: 3rem 1rem;
     }
     h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
       color: #58a6ff;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
     p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       color: #8b949e;
-      max-width: 600px;
+      max-width: 700px;
       margin: auto;
     }
-    .footer {
+    .btn {
+      display: inline-block;
       margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #238636;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #2ea043;
+    }
+    footer {
+      margin-top: 4rem;
       font-size: 0.9rem;
       color: #6e7681;
     }
-    a {
-      color: #58a6ff;
-      text-decoration: none;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to AnonAI</h1>
-  <p>The AI that learns from code, text, videos, and more to help you generate, debug, and improve projects — all offline and private.</p>
+  <header>
+    <h1>Welcome to AnonAI</h1>
+    <p>
+      The AI that learns from code, text, images, videos, and more to generate, fix, and understand your projects — all offline and private.
+    </p>
+    <a href="https://github.com/trololol/AnonAI" class="btn" target="_blank">View on GitHub</a>
+  </header>
 
-  <div class="footer">
-    Built by <a href="https://github.com/trololol" target="_blank">ttrololol</a> | <a href="https://github.com/ttrololol/AnonAI" target="_blank">View on GitHub</a>
-  </div>
+  <footer>
+    Built with passion by <a href="https://github.com/trololol" target="_blank" style="color:#58a6ff">trololol</a>
+  </footer>
+
+  <script>
+    document.querySelector('.btn').addEventListener('click', () => {
+      console.log("GitHub button clicked!");
+    });
+  </script>
 </body>
 </html>
